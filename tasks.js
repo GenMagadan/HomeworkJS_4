@@ -21,7 +21,40 @@
 // Дан массив [1, 2, 3, 4, 5, 6, 7]
 // Сделайте из этого массива следующий [1, 2, 3, 6, 7]
 
-let arr = [1, 2, 3, 4, 5, 6, 7];
+// let arr = [1, 2, 3, 4, 5, 6, 7];
+// console.log(arr);
+// arr.splice(3, 2);
+// console.log(arr);
+
+// Задание 3
+// Используя Math.random() вам необходимо генерировать цифры от 0 до 9, и создать массив состоящий из 5 таких элементов
+// 1. Рассчитать сумму элементов этого массива
+// 2. Найти минимальное число
+// 3. Найти есть ли в этом массиве число 3
+
+let arr = [];
+for (let i = 0; i < 5; i++) {
+   let number = parseInt(Math.random() * 9 - 0);
+   arr[i] = number;
+}
 console.log(arr);
-arr.splice(3, 2);
-console.log(arr);
+let sum = 0;
+let min = arr[0];
+for (let j = 0; j < arr.length; j++) {
+   sum = sum + arr[j];
+   if (arr[j] < min) {
+      min = arr[j];
+   }
+}
+let findThree = (array) => {
+   for (let i = 0; i < array.length; i++) {
+      if (array[i] === 3) {
+         return 'Присутствует'
+      }
+   }
+   return 'Отсутствует'
+}
+
+console.log(`Сумма элементов массива = ${sum}`);
+console.log(`Минимальное число в массиве - ${min}`);
+console.log(`3 в массиве - ${findThree(arr)}`);
