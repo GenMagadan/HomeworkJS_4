@@ -32,29 +32,45 @@
 // 2. Найти минимальное число
 // 3. Найти есть ли в этом массиве число 3
 
-let arr = [];
-for (let i = 0; i < 5; i++) {
-   let number = parseInt(Math.random() * 9 - 0);
-   arr[i] = number;
-}
-console.log(arr);
-let sum = 0;
-let min = arr[0];
-for (let j = 0; j < arr.length; j++) {
-   sum = sum + arr[j];
-   if (arr[j] < min) {
-      min = arr[j];
-   }
-}
-let findThree = (array) => {
-   for (let i = 0; i < array.length; i++) {
-      if (array[i] === 3) {
-         return 'Присутствует'
-      }
-   }
-   return 'Отсутствует'
-}
+// let arr = [];
+// for (let i = 0; i < 5; i++) {
+//    let number = parseInt(Math.random() * 9 - 0);
+//    arr[i] = number;
+// }
+// console.log(arr);
+// let sum = 0;
+// let min = arr[0];
+// for (let j = 0; j < arr.length; j++) {
+//    sum = sum + arr[j];
+//    if (arr[j] < min) {
+//       min = arr[j];
+//    }
+// }
+// let findThree = (array) => {
+//    for (let i = 0; i < array.length; i++) {
+//       if (array[i] === 3) {
+//          return 'Присутствует'
+//       }
+//    }
+//    return 'Отсутствует'
+// }
 
-console.log(`Сумма элементов массива = ${sum}`);
-console.log(`Минимальное число в массиве - ${min}`);
-console.log(`3 в массиве - ${findThree(arr)}`);
+// console.log(`Сумма элементов массива = ${sum}`);
+// console.log(`Минимальное число в массиве - ${min}`);
+// console.log(`3 в массиве - ${findThree(arr)}`);
+
+// *Необязательное задание. *
+// Необходимо вывести горку в консоль(используя цикл for), как
+// показано на рисунке, только у вашей горки должно быть 20 рядов, а не 5:
+
+// x
+// xx
+// xxx
+// xxxx
+// xxxxx
+
+let img = '';
+for (let i = 1; i <= 20; i++) {
+   img = img + 'x';
+   console.log(img);
+}
